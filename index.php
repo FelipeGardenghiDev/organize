@@ -26,21 +26,21 @@
                 <a class="nav-link active" aria-current="page" href="#">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/FAQ.html">FAQ</a>
+                <a class="nav-link" href="./pages/FAQ.php">FAQ</a>
               </li>
               <li class="nav-item">
                 <div class="dropdown">
                   <a class="nav-link dropdown dropdown-toggle" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ferramentas</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="./pages/cadastro-produtos.html">Cadastro de Produtos</a></li>
-                    <li><a class="dropdown-item" href="./pages/clientes-fornecedores.html">Clientes e Fornecedores</a></li>
-                    <li><a class="dropdown-item" href="./pages/fluxo-de-caixa.html">Fluxo de Caixa</a></li>
-                    <li><a class="dropdown-item" href="./pages/relatorios.html">Relatórios</a></li>
+                    <li><a class="dropdown-item" href="./pages/cadastro-produtos.php">Cadastro de Produtos</a></li>
+                    <li><a class="dropdown-item" href="./pages/clientes-fornecedores.php">Clientes e Fornecedores</a></li>
+                    <li><a class="dropdown-item" href="./pages/fluxo-de-caixa.php">Fluxo de Caixa</a></li>
+                    <li><a class="dropdown-item" href="./pages/relatorios.php">Relatórios</a></li>
                   </ul>
                 </div>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./pages/configuracoes.html">Configurações</a>
+                <a class="nav-link" href="./pages/configuracoes.php">Configurações</a>
               </li>
             </ul>
           </div>

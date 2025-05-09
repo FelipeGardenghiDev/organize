@@ -16,30 +16,30 @@
             <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="">OrgaNize</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="../index.php">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="./FAQ.html">FAQ</a>
+                        <a class="nav-link" href="./FAQ.php">FAQ</a>
                       </li>
                       <li class="nav-item">
                           <div class="dropdown">
                                 <a class="nav-link dropdown dropdown-toggle active" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ferramentas</a>
                                 <ul class="dropdown-menu">
                                     <li><a class="dropdown-item active text-bg-dark" href="#">Cadastro de Produtos</a></li>
-                                    <li><a class="dropdown-item" href="./clientes-fornecedores.html">Clientes e Fornecedores</a></li>
-                                    <li><a class="dropdown-item" href="./fluxo-de-caixa.html">Fluxo de Caixa</a></li>
-                                    <li><a class="dropdown-item" href="./relatorios.html">Relatórios</a></li>
+                                    <li><a class="dropdown-item" href="./clientes-fornecedores.php">Clientes e Fornecedores</a></li>
+                                    <li><a class="dropdown-item" href="./fluxo-de-caixa.php">Fluxo de Caixa</a></li>
+                                    <li><a class="dropdown-item" href="./relatorios.php">Relatórios</a></li>
                             </ul>
                             </div>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="./configuracoes.html">Configurações</a>
+                        <a class="nav-link" href="./configuracoes.php">Configurações</a>
                       </li>
                     </ul>
                   </div>
@@ -93,7 +93,8 @@
               </thead>
               <tbody>
                 <tr>
-                  <td align="center"><span class="d-flex justify-content-center align-items-center" style="gap:0.6rem;"><i class="bi bi-trash-fill"></i><i class="bi bi-pencil-fill"></i></span></td>
+                  <td align="center"><span class="d-flex justify-content-center align-items-center" style="gap:0.6rem;"><i class="bi bi-trash-fill"></i>
+                    <i class="bi bi-pencil-fill"></i></span></td>
                   <td align="center">CR56</td>
                   <td align="center">Trevo</td>
                   <td align="center">Canivete Cabo de Madeira Aço Inox Com Ponta 18cm</td>
@@ -102,7 +103,8 @@
                   <td align="center">Canivetes</td>
                 </tr>
                 <tr>
-                  <td align="center"><span class="d-flex justify-content-center align-items-center" style="gap:0.6rem;"><i class="bi bi-trash-fill"></i><i class="bi bi-pencil-fill"></i></span></td>
+                  <td align="center"><span class="d-flex justify-content-center align-items-center" style="gap:0.6rem;"><i class="bi bi-trash-fill"></i>
+                    <i class="bi bi-pencil-fill"></i></span></td>
                   <td align="center">CR78</td>
                   <td align="center">Horse</td>
                   <td align="center">Bainha GG</td>
@@ -111,7 +113,8 @@
                   <td align="center">Bainhas</td>
                 </tr>
                 <tr>
-                  <td align="center"><span class="d-flex justify-content-center align-items-center" style="gap:0.6rem;"><i class="bi bi-trash-fill"></i><i class="bi bi-pencil-fill"></i></span></td>
+                  <td align="center"><span class="d-flex justify-content-center align-items-center" style="gap:0.6rem;"><i class="bi bi-trash-fill"></i>
+                    <i class="bi bi-pencil-fill"></i></span></td>
                   <td align="center">CR122</td>
                   <td align="center">Matelê</td>
                   <td align="center">Strop de Couro Grande Dupla Face</td>
@@ -131,7 +134,8 @@
         </div>        
         <a class="btn" href="mailto:felipegg.dev@gmail.com" target="_blank" rel="noopener noreferrer"><i
           class="bi bi-envelope"></i></a>
-      <a class="btn" href="https://wa.me/5516993733667/?text=Olá! Estou entrando em contato referente ao OrgaNize." target="_blank" rel="noopener noreferrer"><i
+      <a class="btn" href="https://wa.me/5516993733667/?text=Olá! Estou entrando em contato referente ao OrgaNize." target="_blank" 
+        rel="noopener noreferrer"><i
           class="bi bi-whatsapp"></i></a>
       <a class="btn" href="https://www.instagram.com/felipegardenghi.dev/" target="_blank" rel="noopener noreferrer"><i
           class="bi bi-instagram"></i></a>

@@ -23,21 +23,24 @@
           <div class="collapse navbar-collapse" id="navbarNav">
             <ul class="navbar-nav">
               <li class="nav-item">
-                <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                <a class="nav-link" aria-current="page" href="../index.php">Home</a>
               </li>
               <li class="nav-item">
-                <a class="nav-link" href="./FAQ.html">FAQ</a>
+                <a class="nav-link" href="./FAQ.php">FAQ</a>
               </li>
               <li class="nav-item">
                 <div class="dropdown">
                   <a class="nav-link dropdown dropdown-toggle active" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ferramentas</a>
                   <ul class="dropdown-menu">
-                    <li><a class="dropdown-item" href="./cadastro-produtos.html">Cadastro de Produtos</a></li>
-                    <li><a class="dropdown-item" href="./clientes-fornecedores.html">Clientes e Fornecedores</a></li>
-                    <li><a class="dropdown-item" href="./fluxo-de-caixa.html">Fluxo de Caixa</a></li>
+                    <li><a class="dropdown-item" href="./cadastro-produtos.php">Cadastro de Produtos</a></li>
+                    <li><a class="dropdown-item" href="./clientes-fornecedores.php">Clientes e Fornecedores</a></li>
+                    <li><a class="dropdown-item" href="./fluxo-de-caixa.php">Fluxo de Caixa</a></li>
                     <li><a class="dropdown-item active text-bg-dark" href="#">Relatórios</a></li>
                   </ul>
                 </div>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="./configuracoes.php">Configurações</a>
               </li>
             </ul>
           </div>

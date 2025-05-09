@@ -1,3 +1,10 @@
+<?php
+// Código de conexão do php com o banco de dados sqlite via PDO
+$pdo = new PDO('sqlite:../banco.db');
+$entidades = $pdo->query('SELECT * FROM ENTIDADES');
+
+?>
+
 <!DOCTYPE html>
 <html lang="pt-br">
     <head>
@@ -16,30 +23,30 @@
             <nav class="navbar fixed-top navbar-expand-lg bg-body-tertiary">
                 <div class="container-fluid">
                   <a class="navbar-brand" href="">OrgaNize</a>
-                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
+                  <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" 
+                    aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span>
                   </button>
                   <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav">
                       <li class="nav-item">
-                        <a class="nav-link" aria-current="page" href="../index.html">Home</a>
+                        <a class="nav-link" aria-current="page" href="../index.php">Home</a>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="./FAQ.html">FAQ</a>
+                        <a class="nav-link" href="./FAQ.php">FAQ</a>
                       </li>
                       <li class="nav-item">
                           <div class="dropdown">
                                 <a class="nav-link dropdown dropdown-toggle active" role="button" data-bs-toggle="dropdown" aria-expanded="false">Ferramentas</a>
                                 <ul class="dropdown-menu">
-                                    <li><a class="dropdown-item" href="./cadastro-produtos.html">Cadastro de Produtos</a></li>
+                                    <li><a class="dropdown-item" href="./cadastro-produtos.php">Cadastro de Produtos</a></li>
                                     <li><a class="dropdown-item active text-bg-dark" href="#">Clientes e Fornecedores</a></li>
-                                    <li><a class="dropdown-item" href="./fluxo-de-caixa.html">Fluxo de Caixa</a></li>
-                                    <li><a class="dropdown-item" href="./relatorios.html">Relatórios</a></li>
+                                    <li><a class="dropdown-item" href="./fluxo-de-caixa.php">Fluxo de Caixa</a></li>
+                                    <li><a class="dropdown-item" href="./relatorios.php">Relatórios</a></li>
                             </ul>
                             </div>
                       </li>
                       <li class="nav-item">
-                        <a class="nav-link" href="./configuracoes.html">Configurações</a>
+                        <a class="nav-link" href="./configuracoes.php">Configurações</a>
                       </li>
                     </ul>
                   </div>
@@ -57,61 +64,58 @@
             <div class="container-fluid text-center mt-5 pt-5">
                 <h2 class="text-uppercase fs-2 display-1">Clientes e Fornecedores</h2>
             </div>
-            <div class="d-flex justify-content-between align-items-center mb-2 mt-3 m-5">
-              <div></div>
-              <div></div>
-              <div></div>
-              <div class="d-inline-flex input-group mb-3" style="height:2rem;width:16rem;">
+            <div class="d-flex justify-content-between align-items-center mb-4 mt-3 m-5">
+              <div class="d-inline-flex input-group mb-3" style="height:6.5vh;width:19vw;">
                 <span class="input-group-text">Filtrar por</span>
                 <select class="form-select">
                   <option selected>Selecione</option>
                   <option value="1">Clientes</option>
                   <option value="2">Fornecedores</option>
-                  <option value="3">Todos</option>
+                  <option value="3">Logística</option>
+                  <option value="4">Todos</option>
                 </select>
               </div>
-              <div></div>
-              <div>
-                <button type="button" class="btn btn-success d-flex align-items-center" style="height:2.4rem;"><i class="bi bi-plus"></i>Adicionar contato</button>
-              </div>
+              <!-- Ver se esse é o melhor jeito do button para levar ao form, passando parametros e etc. Considerar usar JS -->
+              <button type="button" onClick="window.location = 'forms/form-cadastro-entidades.php'" class="btn btn-success d-flex align-items-center justify-content-center" style="height:6.5vh;width:12vw;">
+                <div style="font-size:1.2vw;"><i class="bi bi-plus-circle"></i> Novo Cadastro</div>
+              </button>
             </div>
             <table class="table table-striped">
               <thead>
                 <tr>
                   <th style="width:6%;"></th>
-                  <th style="width:45%;text-align:center;">Nome</th>
-                  <th style="width:25%;text-align:center;">Contato</th>
+                  <th style="width:15%;text-align:center;">Data de Cadastro</th>
+                  <th style="width:15%;text-align:center;">Data de Atualização</th>
+                  <th style="width:25%;text-align:center;">Nome</th>
+                  <th style="width:19%;text-align:center;">Contato</th>
                   <th style="width:10%;text-align:center;">Tipo</th>
                   <th style="width:10%;text-align:center;">Categoria</th>
                 </tr>
               </thead>
               <tbody>
+              <?php 
+                foreach ($entidades as $entidade) {
+              ?>
                 <tr>
-                  <td align="center"><span class="d-flex justify-content-center align-items-center" style="gap:1rem;"><i class="bi bi-trash-fill"></i><i class="bi bi-pencil-fill"></i></span></td>
-                  <td align="center">Mariléia de Fátima Gardenghi</td>
-                  <td align="center">leiagardenghi@hotmail.com</td>
-                  <td align="center">Pessoa Física</td>
-                  <td align="center">Cliente</td>
+                  <td align="center"><span class="d-flex justify-content-center align-items-center" style="gap:1rem;"><i class="bi bi-trash-fill"></i>
+                    <i class="bi bi-pencil-fill"></i></span></td>
+                    <td align="center"><?=$entidade['DATA_CADASTRO']?></td>
+                    <td align="center"><?=$entidade['DATA_ATUALIZACAO']?></td>
+                    <td align="center"><?=$entidade['NOME']?></td>
+                    <td align="center"><?=$entidade['EMAIL']?></td>
+                  <td align="center"><?=$entidade['TIPO_ENTIDADE']?></td>
+                  <td align="center"><?=$entidade['CATEGORIA_ENTIDADE']?></td>
                 </tr>
-                <tr>
-                  <td align="center"><span class="d-flex justify-content-center align-items-center" style="gap:1rem;"><i class="bi bi-trash-fill"></i><i class="bi bi-pencil-fill"></i></span></td>
-                  <td align="center">Marcos dos Santos</td>
-                  <td align="center">marcosdsantos@gmail.com</td>
-                  <td align="center">Pessoa Física</td>
-                  <td align="center">Fornecedor</td>
-                </tr>
-                <tr>
-                  <td align="center"><span class="d-flex justify-content-center align-items-center" style="gap:1rem;"><i class="bi bi-trash-fill"></i><i class="bi bi-pencil-fill"></i></span></td>
-                  <td align="center">Metalúrgica Trevo</td>
-                  <td align="center">metalurgicatrevo@gmail.com</td>
-                  <td align="center">Pessoa Jurídica</td>
-                  <td align="center">Fornecedor</td>
-                </tr>
+                <!-- Criar um "DROPDOWN" (com aquelas setinhas do lado de expandir, estilo o dropdown do navbar mesmo) quando clica em algum dessas entidades, para 
+                  abrir uma lista (estilo tabela mesmo) mostrando os contatos dentro de cada uma dessas entidades!! -->
+              <?php
+                }
+              ?>
               </tbody>
             </table>
           </section>
         </main>
-
+ 
         <footer class="text-center mt-3">
     <section class="container p-4 pb-0 mb-2">
         <div class="text-center mt-4">
